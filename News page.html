@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News page</title>
+        <link rel="stylesheet" href="assets/css/stylenews.css">
+    </head>
+    <body>
+        <nav>
+            <div class="menu-mobile">
+                <a href="#">Menu</a>
+            </div>
+            <ul>
+                <li><a href="Coba.html">PROFILE</a></li>
+                <li><a href="News page.html">ABOUT</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+        
+
+        <h1 class="judul">Selamat Datang di Website Saya</h1>
+        <h1 class="judul" id="pResponden"></h1>
+        <p class="paragraf">Website ini adalah website yang saya buat<p class="paragraf">dengan tujuan untuk memenuhi tugas UTS <p class="paragraf">mata kuliah "Pemrograman Komputer 2"<p class="paragraf">yaitu pembuatan website</p>
+
+        <img id="photo1" src="assets/gambar/pemrograman.jpg" width="400" height="200">
+
+        <img id="photo2" src="assets/gambar/codingan.jpg" width="400" height="200">
+
+        <p class="paragraf2">di dalam website ini terdapat<p class="paragraf2">beberapa unsur pembentuk seperti<p class="paragraf2">menu navigasi,script,css dan form.</p>
+
+     
+        <h2 class="paragraf3">TEKAN SALAH SATU TOMBOL DI BAWAH UNTUK MEMPELAJARI WEBSITE INI</h2>
+        
+    <section id="box-tombol">
+        <div id="tombol">
+            <input href="#pmenunavigasi" type="submit" name="menunavigasi" value="Menu Navigasi" onclick="navigasi()" class="bg-blue">
+            <input href="#pcss" type="submit" name="css" value="CSS" class="bg-green" onclick="ncss()">
+            <input href="#pscript" type="submit" name="script" value="Script" class="bg-red" onclick="nscript()">
+            <input href="pform" type="submit" name="form" value="Form" class="bg-yellow" onclick="nform()">
+        </div>
+    </section>
+
+    <section id="pmenunavigasi">
+        <img class="photo3" src="assets/gambar/menunavigasi1.jpg" width="400" height="200">
+        <h4>Menu Navigasi adalah sebuah program yang berfungsi untuk menghubungkan antara halaman website yang satu dengan halaman yang lain.</h4>
+        <img class="photo3" src="assets/gambar/menunavigasi2.jpeg" width="400" height="200">
+        <h4>pada umumnya, codingan menu navigasi dibuat di bagian awal dari body dalam bentuk list</h4>
+        <img class="photo3" src="assets/gambar/menunavigasi3.jpeg" width="400" height="200">
+        <h4>agar tampilan menu navigasi menjadi seperti gambar pertama, dapat diperindah di bagian css</h4>
+    </section>
+
+    <section id="pcss">
+        <img src="assets/gambar/css1.jpeg" width="400" height="200">
+        <h4>css merupakan sebuah program untuk mengatur dan memperindah visual dari website yang kita buat</h4>
+    </section>
+
+    <section id="pscript">
+        <img src="assets/gambar/script1.jpeg" width="400" height="200">
+        <h4>java script adalah program yang berfungsi untuk menampilkan data</h4>
+        <h4>pada website ini, script digunakan untuk menampilkan tampilan form untuk mengedit profile</h4>
+        <img src="assets/gambar/script2.jpeg" width="400" height="200">
+        <h4>codingan script dapat langsung ditulis di dalam data html tanpa harus ditulis di css</h4>
+    </section>
+
+    <section id="pform">
+        <img src="assets/gambar/form1.jpeg" width="400" height="200">
+        <h4>form adalah tempat responden dapat mengisikan sesuatu sesuai dengan keterangan pada website</h4>
+    </section>
+
+    <script>
+        var menunavigasi = document.getElementById("pmenunavigasi");
+        menunavigasi.style.display = "none";
+        var css = document.getElementById("pcss");
+        css.style.display = "none";
+        var script = document.getElementById("pscript");
+        script.style.display = "none";
+        var form = document.getElementById("pform");
+        form.style.display = "none";
+
+        function navigasi(){
+                if(menunavigasi.style.display==="none"){
+                    menunavigasi.style.display="block";
+                }else{
+                    menunavigasi.style.display="none";
+                }
+            }
+        function ncss(){
+                if(css.style.display==="none"){
+                    css.style.display="block";
+                }else{
+                    css.style.display="none";
+                }
+            }    
+        function nscript(){
+                if(script.style.display==="none"){
+                    script.style.display="block";
+                }else{
+                    script.style.display="none";
+                }
+            }
+        function nform(){
+                if(form.style.display==="none"){
+                    form.style.display="block";
+                }else{
+                    form.style.display="none";
+                }
+            }
+    </script>
+
+       
+        
+  </body>
+</html>

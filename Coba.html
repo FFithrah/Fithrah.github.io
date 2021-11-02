@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile page</title>
+        <link rel="stylesheet" href="assets/css/cobastyle.css">
+    </head>
+    <body>
+        <nav>
+            <div class="menu-mobile">
+                <a href="#">Menu</a>
+            </div>
+            <ul>
+                <li><a href="Coba.html">PROFILE</a></li>
+                <li><a href="News page.html">ABOUT</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+
+        <section id="box-profile">
+            <div class="img-profile">
+                <div class="photo" style="background-image: url(assets/gambar/fithrah.jpeg);"></div>
+            </div>
+            <div class="description">
+                <h1 id="pName"> Muhammad Fithrullah</h1>
+                <p id="pRole">Matematika</p>
+                <a href="#input-form" class="button bg-green" onclick="editform()">Edit</a>
+                <!-- <a href="#" class="button border-blue">Resume</a> -->
+            </div>
+            <div class="information">
+                <div class="data">
+                    <p class="field">NIM</p>
+                    <p id="pNim" class="text-gray">19610102</p>
+                </div>
+                <div class="data">
+                    <p class="field">Age</p>
+                    <p id="pAge" class="text-gray">20</p>
+                </div>
+                <div class="data">
+                    <p class="field">Domisili</p>
+                    <p id="pDomisili" class="text-gray">Mataram, Lombok</p>
+                </div>
+                <div class="data">
+                    <p class="field">Semester</p>
+                    <p id="pSemester" class="text-gray">V</p>
+                </div>
+                <div class="data">
+                    <p class="field">Email</p>
+                    <p id="pEmail" class="text-gray">muhammadfithrullah@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="input-form">
+            <!-- <form method="#" action="#"> -->
+                <div class="form">
+                    <label>Nama</label>
+                    <input id="inpName" type="text" name="name">
+                </div>
+                <div class="form">
+                    <label>Role</label>
+                    <input id="inpRole" type="text" name="role">
+                </div>
+                <div class="form">
+                    <label>Nim</label>
+                    <input id="inpNim" type="number" name="nim">
+                </div>
+                <div class="form">
+                    <label>Age</label>
+                    <input id="inpAge" type="number" name="age">
+                </div>
+                <div class="form">
+                    <label>Domisili</label>
+                    <input id="inpDomisili" type="text" name="domisili">
+                </div>
+                <div class="form">
+                    <label>Semester</label>
+                    <input id="inpSemester" type="number" name="semester">
+                </div>
+                <div class="form">
+                    <label>Email</label>
+                    <input id="inpEmail" type="email" name="email">
+                </div>
+                <div>
+                    <input onclick="simpanform()" type="submit" name="submit" value="SUBMIT" class="bg-blue">
+                </div>
+            <!-- </form> -->
+        </section>
+        <script>
+            var formMenu = document.getElementById("input-form");
+            formMenu.style.display = "none";
+
+            function editform(){
+                if(formMenu.style.display==="none"){
+                    formMenu.style.display="block";
+                }else{
+                    formMenu.style.display="none";
+                }
+
+                var name = document.getElementById("pName").innerHTML;
+                var role = document.getElementById("pRole").innerHTML;
+                var nim = document.getElementById("pNim").innerHTML;
+                var age = document.getElementById("pAge").innerHTML;
+                var domisili = document.getElementById("pDomisili").innerHTML;
+                var semester = document.getElementById("pSemester").innerHTML;
+                var email = document.getElementById("pEmail").innerHTML;
+                
+                document.getElementById("inpName").value=name;
+                document.getElementById("inpRole").value=role;
+                document.getElementById("inpNim").value=nim;
+                document.getElementById("inpAge").value=age;
+                document.getElementById("inpDomisili").value=domisili;
+                document.getElementById("inpSemester").value=semester;
+                document.getElementById("inpEmail").value=email;
+            }
+
+            function simpanform(){
+                formMenu.style.display = "none";
+                var name = document.getElementById("inpName").value;
+                var role = document.getElementById("inpRole").value;
+                var nim = document.getElementById("inpNim").value;
+                var age = document.getElementById("inpAge").value;
+                var domisili = document.getElementById("inpDomisili").value;
+                var semester = document.getElementById("inpSemester").value;
+                var email = document.getElementById("inpEmail").value;
+
+                document.getElementById("pName").innerHTML = name;
+                document.getElementById("pRole").innerHTML = role;
+                document.getElementById("pNim").innerHTML = nim;
+                document.getElementById("pAge").innerHTML = age;
+                document.getElementById("pDomisili").innerHTML = domisili;
+                document.getElementById("pSemester").innerHTML = semester;
+                document.getElementById("pEmail").innerHTML = email;
+
+            }
+        </script>
+    </body>
+</html>
